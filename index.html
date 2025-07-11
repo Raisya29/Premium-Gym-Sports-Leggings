@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Gym Sports Leggings - Bestbrand.shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'soft-pink': '#ffb3ba',
+                        'lavender': '#e6e6fa',
+                        'mint': '#b3ffb3',
+                        'peach': '#ffdab9',
+                        'accent-white': '#ffffff',
+                    },
+                    fontFamily: {
+                        'heading': ['Playfair Display', 'serif'],
+                        'body': ['Inter', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --soft-pink: #ffb3ba;
+            --lavender: #e6e6fa;
+            --mint: #b3ffb3;
+            --peach: #ffdab9;
+            --accent-white: #ffffff;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #fff5f6 0%, #f8f7ff 100%);
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        .hero-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://down-id.img.susercontent.com/file/id-11134207-7rbk5-m99ptpekdjwxf1.webp');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        
+        .feature-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(246, 245, 255, 0.9) 100%);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .parallax-section {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .price-tag {
+            position: relative;
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, var(--soft-pink) 0%, var(--lavender) 100%);
+            color: white;
+            font-weight: bold;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .price-tag::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 10px 10px 0;
+            border-style: solid;
+            border-color: var(--soft-pink) transparent transparent;
+        }
+        
+        .size-guide {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(230, 230, 250, 0.9) 100%);
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .size-guide th {
+            background: linear-gradient(135deg, var(--soft-pink) 0%, var(--lavender) 100%);
+            color: white;
+        }
+        
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .sticky-cta.show {
+            transform: translateY(0);
+        }
+        
+        .countdown-box {
+            background: linear-gradient(135deg, var(--soft-pink) 0%, var(--lavender) 100%);
+            border-radius: 10px;
+            padding: 5px 10px;
+            color: white;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .order-form-container {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(230, 230, 250, 0.9) 100%);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        
+        .trust-badge {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50px;
+            padding: 8px 20px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--soft-pink) 0%, var(--lavender) 100%);
+            color: white;
+            font-weight: bold;
+            padding: 12px 30px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, var(--mint) 0%, var(--peach) 100%);
+            color: #333;
+            font-weight: bold;
+            padding: 12px 30px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .star-rating i {
+            color: #FFD700;
+            text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 179, 186, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(255, 179, 186, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 179, 186, 0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                background-attachment: scroll;
+            }
+            
+            .parallax-section {
+                background-attachment: scroll;
+            }
+        }
+    </style>
+</head>
+<body class="relative">
+    <!-- Sticky CTA Button -->
+    <div class="sticky-cta p-4 bg-white shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <div>
+                <p class="font-bold text-lg">Premium Gym Sports Leggings</p>
+                <p class="text-sm">
+                    <span class="line-through text-gray-500">Rp 295.000</span>
+                    <span class="text-red-600 font-bold ml-2">Rp 225.000</span>
+                </p>
+            </div>
+            <a href="#order-form" class="btn-primary">Pesan Sekarang</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section min-h-screen flex items-center relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="font-heading text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 fade-in">
+                    Premium Gym Sports Leggings
+                </h1>
+                <p class="text-xl md:text-2xl text-white mb-10 max-w-2xl mx-auto">
+                    Leggings premium yang dirancang khusus untuk mendukung gerakanmu saat gym, yoga, lari, maupun aktivitas harian.
+                </p>
+                
+                <div class="flex flex-wrap justify-center gap-4 mb-10">
+                    <div class="trust-badge flex items-center">
+                        <i class="fas fa-shipping-fast text-xl mr-2 text-purple-600"></i>
+                        <span>Gratis Ongkir</span>
+                    </div>
+                    <div class="trust-badge flex items-center">
+                        <i class="fas fa-shield-alt text-xl mr-2 text-green-500"></i>
+                        <span>Garansi 30 Hari</span>
+                    </div>
+                    <div class="trust-badge flex items-center">
+                        <i class="fas fa-undo text-xl mr-2 text-blue-500"></i>
+                        <span>Pengembalian Mudah</span>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#order-form" class="btn-primary pulse text-lg py-4 px-8 inline-block">
+                        <i class="fas fa-shopping-cart mr-2"></i>Pesan Sekarang
+                    </a>
+                    <a href="#features" class="btn-secondary text-lg py-4 px-8 inline-block">
+                        <i class="fas fa-info-circle mr-2"></i>Lihat Detail Video
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase -->
+    <section id="features" class="py-20 bg-gradient-to-b from-white to-lavender/10">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">Leggings Premium Untuk Setiap Gerakanmu</h2>
+                <div class="w-24 h-1 bg-soft-pink mx-auto mb-6"></div>
+                <p class="text-lg max-w-3xl mx-auto">
+                    ✨ Premium Gym Sports Leggings hadir untuk mendukung setiap gerakanmu dengan nyaman dan stylish.
+                </p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-10 items-center mb-20">
+                <div class="lg:w-1/2">
+                    <div class="video-container">
+                        <iframe src="https://ik.imagekit.io/yiqpr65nr/vid%20pendek.mp4?updatedAt=1752238080087" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="glass-card p-8">
+                        <h3 class="font-heading text-2xl font-bold mb-4">Desain Premium Untuk Performa Terbaik</h3>
+                        <p class="mb-6">
+                            Dibuat dari bahan stretch premium yang ringan, breathable, dan anti-transparan, leggings ini memeluk tubuh dengan pas tanpa membatasi ruang gerak.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>Bahan stretch premium, ringan & breathable</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>Anti-transparan, aman untuk squat dan workout intens</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>High-waist design untuk membentuk siluet tubuh lebih ramping</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>Nyaman dipakai seharian tanpa rasa gerah</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-grid mb-20">
+                <div class="gallery-item">
+                    <img src="https://cdn.orderonline.id/uploads/images_8682541752227394868.jpg" alt="Leggings Premium" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://down-id.img.susercontent.com/file/id-11134207-7rbkc-m92i7qfzfgv126.webp" alt="Leggings Premium" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://down-id.img.susercontent.com/file/id-11134207-7rbk7-m92i7qg9dno1f8.webp" alt="Leggings Premium" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://down-id.img.susercontent.com/file/id-11134207-7rbk5-m92i7qfzux3x2a.webp" alt="Leggings Premium" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://down-id.img.susercontent.com/file/id-11134207-7rbk5-m92i7qg0fzm948.webp" alt="Leggings Premium" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://down-id.img.susercontent.com/file/id-11134207-7rbkb-m8zlq1mvqhht66.webp" alt="Leggings Premium" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits & Features -->
+    <section class="py-20 bg-gradient-to-b from-lavender/10 to-mint/10">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">Keunggulan Premium Leggings</h2>
+                <div class="w-24 h-1 bg-soft-pink mx-auto mb-6"></div>
+                <p class="text-lg max-w-3xl mx-auto">
+                    Leggings yang dirancang khusus untuk memberikan kenyamanan maksimal dalam setiap aktivitas
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+                <div class="feature-card glass-card p-8 rounded-xl text-center">
+                    <div class="w-20 h-20 rounded-full bg-soft-pink/20 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-wind text-3xl text-soft-pink"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-3">Bahan Breathable</h3>
+                    <p>Bahan khusus yang memungkinkan sirkulasi udara optimal sehingga tidak gerah saat dipakai.</p>
+                </div>
+                
+                <div class="feature-card glass-card p-8 rounded-xl text-center">
+                    <div class="w-20 h-20 rounded-full bg-lavender/20 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-expand-arrows-alt text-3xl text-lavender"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-3">Stretch Premium</h3>
+                    <p>Elastisitas tinggi yang memberikan kebebasan bergerak tanpa merusak bentuk leggings.</p>
+                </div>
+                
+                <div class="feature-card glass-card p-8 rounded-xl text-center">
+                    <div class="w-20 h-20 rounded-full bg-mint/20 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-eye-slash text-3xl text-mint"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-3">Anti Transparan</h3>
+                    <p>Desain khusus yang menjaga privasi Anda bahkan saat melakukan gerakan intens seperti squat.</p>
+                </div>
+                
+                <div class="feature-card glass-card p-8 rounded-xl text-center">
+                    <div class="w-20 h-20 rounded-full bg-peach/20 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-heart text-3xl text-peach"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-3">High-Waist Design</h3>
+                    <p>Membentuk siluet tubuh lebih ramping dan memberikan dukungan optimal pada area perut.</p>
+                </div>
+            </div>
+            
+            <!-- Size Guide -->
+            <div class="size-guide overflow-x-auto mb-20">
+                <table class="w-full text-center">
+                    <thead>
+                        <tr>
+                            <th class="py-4 px-6">Ukuran</th>
+                            <th class="py-4 px-6">Lingkar Pinggang</th>
+                            <th class="py-4 px-6">Lingkar Paha</th>
+                            <th class="py-4 px-6">Panggul</th>
+                            <th class="py-4 px-6">Panjang</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b">
+                            <td class="py-4 px-6 font-bold">S</td>
+                            <td class="py-4 px-6">50-74 cm</td>
+                            <td class="py-4 px-6">42 cm</td>
+                            <td class="py-4 px-6">78 cm</td>
+                            <td class="py-4 px-6">86 cm</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-4 px-6 font-bold">M</td>
+                            <td class="py-4 px-6">52-76 cm</td>
+                            <td class="py-4 px-6">44 cm</td>
+                            <td class="py-4 px-6">82 cm</td>
+                            <td class="py-4 px-6">87 cm</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-4 px-6 font-bold">L</td>
+                            <td class="py-4 px-6">56-80 cm</td>
+                            <td class="py-4 px-6">46 cm</td>
+                            <td class="py-4 px-6">84 cm</td>
+                            <td class="py-4 px-6">88 cm</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-4 px-6 font-bold">XL</td>
+                            <td class="py-4 px-6">59-83 cm</td>
+                            <td class="py-4 px-6">48 cm</td>
+                            <td class="py-4 px-6">88 cm</td>
+                            <td class="py-4 px-6">89 cm</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-4 px-6 font-bold">XXL</td>
+                            <td class="py-4 px-6">62-85 cm</td>
+                            <td class="py-4 px-6">50 cm</td>
+                            <td class="py-4 px-6">92 cm</td>
+                            <td class="py-4 px-6">90 cm</td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-6 font-bold">3XL</td>
+                            <td class="py-4 px-6">65-87 cm</td>
+                            <td class="py-4 px-6">52 cm</td>
+                            <td class="py-4 px-6">96 cm</td>
+                            <td class="py-4 px-6">91 cm</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="parallax-section py-20" style="background-image: url('https://down-id.img.susercontent.com/file/id-11134207-7rbk5-m99ptpekdjwxf1.webp');">
+        <div class="bg-black/50 py-20">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4 text-white">Apa Kata Pelanggan Kami</h2>
+                    <div class="w-24 h-1 bg-soft-pink mx-auto mb-6"></div>
+                    <div class="star-rating text-2xl mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span class="text-white ml-2">4.9/5 dari 1.200+ ulasan</span>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card rounded-xl p-6">
+                        <div class="flex items-center mb-4">
+                            <img src="https://i.pinimg.com/736x/d7/cf/04/d7cf04a9189e38d3f6674f8f277209f5.jpg" alt="Diana Nur.C" class="w-16 h-16 rounded-full object-cover">
+                            <div class="ml-4">
+                                <h4 class="font-bold">Diana Nur.C</h4>
+                                <div class="star-rating text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-4 italic">"Bahannya lembut bgt adem halus enak dipake sangat nyaman dan pas"</p>
+                        <img src="https://down-id.img.susercontent.com/file/id-11134103-7rbk8-mb2zilh0r62g31.webp" alt="Testimonial" class="rounded-lg">
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card rounded-xl p-6">
+                        <div class="flex items-center mb-4">
+                            <img src="https://i.pinimg.com/736x/f2/13/68/f21368bf945f3d92f4c6277db76cc888.jpg" alt="Amelia" class="w-16 h-16 rounded-full object-cover">
+                            <div class="ml-4">
+                                <h4 class="font-bold">Amelia</h4>
+                                <div class="star-rating text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-4 italic">"Melar yagesya ini aku pake ukuran xxl bb aku 90an, nyaman bgt dipake mantep gtu cuttingannya pass apalag bagian booty sm pinggang paling penting, mantep gtu ga kedodoran² dipakenya"</p>
+                        <img src="https://down-id.img.susercontent.com/file/id-11134103-7r98w-lozhlfe1a4ypd6.webp" alt="Testimonial" class="rounded-lg">
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card rounded-xl p-6">
+                        <div class="flex items-center mb-4">
+                            <img src="https://i.pinimg.com/736x/cf/7a/dd/cf7add0bf9b01e28970a5ecc3bba20e1.jpg" alt="Clara Sinta" class="w-16 h-16 rounded-full object-cover">
+                            <div class="ml-4">
+                                <h4 class="font-bold">Clara Sinta</h4>
+                                <div class="star-rating text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-4 italic">"waaah, nyesel si beli satu , next bakal pesen lagi. ukurannya pas bgt XXL. pas ga sempit ga kebesaran, nyaman, ringan baguusss makasiiihhh"</p>
+                        <img src="https://down-id.img.susercontent.com/file/id-11134103-7rbk5-m9qtws983ghfa7.webp" alt="Testimonial" class="rounded-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing & Promo -->
+    <section class="py-20 bg-gradient-to-b from-mint/10 to-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">Dapatkan Leggings Premium Sekarang</h2>
+                <div class="w-24 h-1 bg-soft-pink mx-auto mb-6"></div>
+                <p class="text-lg max-w-3xl mx-auto">
+                    Promo spesial untuk pembelian hari ini
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-8 mb-10">
+                    <div class="text-center">
+                        <div class="price-tag mb-4">
+                            <span class="text-xl">Harga Normal</span>
+                        </div>
+                        <p class="text-3xl font-bold line-through text-gray-500">Rp 295.000</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="price-tag mb-4">
+                            <span class="text-xl">Harga Promo Hari Ini</span>
+                        </div>
+                        <p class="text-4xl font-bold text-red-600">Rp 225.000</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="countdown-box mb-4">
+                            <i class="fas fa-clock mr-2"></i>
+                            <span id="countdown">00:15:00</span>
+                        </div>
+                        <p class="text-lg font-bold">Promo Berakhir Dalam</p>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-8 mb-10">
+                    <h3 class="font-heading text-2xl font-bold mb-4 text-center">Garansi Kepuasan 100%</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                        <div>
+                            <div class="w-16 h-16 rounded-full bg-soft-pink/20 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-shipping-fast text-2xl text-soft-pink"></i>
+                            </div>
+                            <p class="font-bold">Gratis Ongkir</p>
+                            <p class="text-sm">Seluruh Indonesia</p>
+                        </div>
+                        <div>
+                            <div class="w-16 h-16 rounded-full bg-lavender/20 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-undo text-2xl text-lavender"></i>
+                            </div>
+                            <p class="font-bold">7 Hari Pengembalian</p>
+                            <p class="text-sm">Tanpa ribet</p>
+                        </div>
+                        <div>
+                            <div class="w-16 h-16 rounded-full bg-mint/20 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-shield-alt text-2xl text-mint"></i>
+                            </div>
+                            <p class="font-bold">Garansi Kualitas</p>
+                            <p class="text-sm">Original & Premium</p>
+                        </div>
+                    </div>
+                </div>
+                
+               
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form -->
+    <section id="order-form" class="py-20 bg-gradient-to-b from-white to-lavender/10">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">Pesan Sekarang</h2>
+                <div class="w-24 h-1 bg-soft-pink mx-auto mb-6"></div>
+                <p class="text-lg max-w-3xl mx-auto">
+                    Isi formulir pemesanan di bawah ini dan dapatkan leggings premium Anda
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="order-form-container p-6 md:p-10">
+                    <!-- OrderOnline Embed Code -->
+                    <div class="ooef">
+                        <form class="orderonline-embed-form" data-username="vera" data-product-slug="premium-gym-sports-leggings" data-product-id="6870db7fa76856c989053a96" id="oo-embed-form-premium-gym-sports-leggings-1208" data-origin="orderonline">
+                            <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div>
+                        </form>
+                    </div>
+                    <script>
+                        if (typeof xLogError != 'function') {
+                            var xLogError = function (error) {
+                                var req = new XMLHttpRequest();
+                                var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack });
+                                var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error';
+                                req.open('POST', 'https://api.orderonline.id/log', true);
+                                req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                                req.send(params);
+                            };
+                        }
+                        try {
+                            if (typeof xEmbedScript != 'function') {
+                                var xEmbedScript = function () {
+                                    !function(w, d, e, v, id, t, s) {
+                                        if (d.getElementById(id)) return;
+                                        t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
+                                        s = d.getElementsByTagName(e)[0];
+                                        s.parentNode.insertBefore(t, s);
+                                    }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js');
+                                };
+                            }
+                            if (typeof xEmbedInit != 'function') {
+                                var xEmbedInit = function (w, n) {
+                                    if (w.ooe) return;
+                                    n = w.ooe = function() {
+                                        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                                    };
+                                    if (!w._ooe) w._ooe = n;
+                                    n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = [];
+                                };
+                            }
+                            xEmbedInit(window);
+                            ooe('setup', 'redirect', 'https://vera.orderonline.id');
+                            ooe('init', '5f1a7807a9bf807d6c63d963', '6870db7fa76856c989053a96', '6870db7fa76856c989053a97', 'oo-embed-form-premium-gym-sports-leggings-1208', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":true,"triggerGtm":true});
+                            if (!window.jQuery) {
+                                !function(w, d, e, v, id, t, s) {
+                                    if (d.getElementById(id)) return;
+                                    t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
+                                    t.addEventListener('load', xEmbedScript);
+                                    s = d.getElementsByTagName(e)[0];
+                                    s.parentNode.insertBefore(t, s);
+                                }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery');
+                            } else {
+                                xEmbedScript();
+                            }
+                        } catch (e) {
+                            xLogError(e);
+                            throw e;
+                        }
+                    </script>
+                    <!-- End OrderOnline Embed Code -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <h3 class="font-heading text-2xl font-bold mb-4">Bestbrand.shop</h3>
+                <p class="mb-6">Toko fashion premium untuk wanita modern</p>
+                <div class="flex justify-center gap-4 mb-6">
+                    <a href="#" class="text-xl"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-xl"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-xl"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="text-xl"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <p class="text-sm text-gray-400">© 2025 Bestbrand.shop. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown timer
+        function startCountdown() {
+            let countdownTime = 15 * 60; // 15 minutes in seconds
+            const countdownElement = document.getElementById('countdown');
+            
+            const timer = setInterval(() => {
+                const minutes = Math.floor(countdownTime / 60);
+                const seconds = countdownTime % 60;
+                
+                countdownElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                
+                if (countdownTime <= 0) {
+                    clearInterval(timer);
+                    countdownElement.textContent = "00:00";
+                } else {
+                    countdownTime--;
+                }
+            }, 1000);
+        }
+        
+        // Sticky CTA
+        function handleStickyCTA() {
+            const stickyCTA = document.querySelector('.sticky-cta');
+            let lastScrollPosition = 0;
+            
+            window.addEventListener('scroll', () => {
+                const currentScrollPosition = window.pageYOffset;
+                
+                if (currentScrollPosition > 500 && currentScrollPosition < lastScrollPosition) {
+                    stickyCTA.classList.add('show');
+                } else {
+                    stickyCTA.classList.remove('show');
+                }
+                
+                lastScrollPosition = currentScrollPosition;
+            });
+        }
+        
+        // Smooth scrolling
+        function setupSmoothScrolling() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        window.scrollTo({
+                            top: target.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        }
+        
+        // Initialize everything
+        document.addEventListener('DOMContentLoaded', () => {
+            startCountdown();
+            handleStickyCTA();
+            setupSmoothScrolling();
+        });
+    </script>
+</body>
+</html>
